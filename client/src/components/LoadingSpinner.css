@@ -1,0 +1,24 @@
+/* Loading Spinner Styles */
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 3px solid rgba(14, 165, 233, 0.3);
+  border-top-color: var(--primary-500);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-message {
+  margin-top: var(--spacing-4);
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}

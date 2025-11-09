@@ -1,0 +1,312 @@
+/* Register Page Styles */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated Background */
+.register-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.register-bg-circle-1 {
+  position: absolute;
+  top: 5rem;
+  left: -10rem;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.register-bg-circle-2 {
+  position: absolute;
+  bottom: -5rem;
+  right: -10rem;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(14, 165, 233, 0.2);
+  border-radius: 50%;
+  filter: blur(60px);
+  animation: pulse 3s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.register-container {
+  max-width: 72rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .register-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Left Side - Branding */
+.register-branding {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@media (min-width: 768px) {
+  .register-branding {
+    display: flex;
+  }
+}
+
+.register-logo-section {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.register-logo-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: linear-gradient(135deg, var(--primary-500), var(--purple-600));
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.register-logo-text {
+  font-size: 2.25rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-400), var(--purple-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.register-heading {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--gray-100);
+  line-height: 1.3;
+}
+
+.register-subheading {
+  font-size: 1.125rem;
+  color: var(--gray-400);
+}
+
+/* Benefits */
+.register-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-4);
+}
+
+.register-benefit {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.register-benefit-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.register-benefit-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.register-benefit-content h4 {
+  color: var(--gray-200);
+  font-weight: 600;
+  margin-bottom: var(--spacing-1);
+}
+
+.register-benefit-content p {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+/* Right Side - Form */
+.register-form-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: slideIn 0.3s ease-out;
+}
+
+.register-form-header {
+  margin-bottom: 2rem;
+}
+
+.register-form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray-100);
+  margin-bottom: var(--spacing-2);
+}
+
+.register-form-subtitle {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+/* Error Message */
+.register-error {
+  margin-bottom: 1.5rem;
+  padding: var(--spacing-4);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  animation: slideIn 0.3s ease-out;
+}
+
+.register-error-text {
+  color: var(--red-400);
+  font-size: 0.875rem;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.register-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-2);
+}
+
+.register-input-wrapper {
+  position: relative;
+}
+
+.register-input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-400);
+}
+
+.register-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  color: var(--gray-100);
+  font-size: 1rem;
+  transition: all var(--transition-base);
+}
+
+.register-input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.register-input::placeholder {
+  color: var(--gray-500);
+}
+
+/* Submit Button */
+.register-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, var(--primary-500), var(--primary-600));
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+  margin-top: var(--spacing-6);
+}
+
+.register-submit:hover:not(:disabled) {
+  background: linear-gradient(to right, var(--primary-600), var(--primary-700));
+  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.5);
+  transform: translateY(-2px);
+}
+
+.register-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.register-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Footer Links */
+.register-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.register-footer-text {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+.register-footer-link {
+  color: var(--primary-400);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.register-footer-link:hover {
+  color: var(--primary-300);
+}

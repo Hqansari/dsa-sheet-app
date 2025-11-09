@@ -1,0 +1,225 @@
+/* Navbar Styles */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.navbar-logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-500), var(--purple-600));
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--primary-400), var(--purple-400));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.navbar-subtitle {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* Desktop Menu */
+.navbar-menu-desktop {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .navbar-menu-desktop {
+    display: flex;
+  }
+}
+
+.navbar-progress-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-progress-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--green-400);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.navbar-progress-text {
+  font-size: 0.875rem;
+  color: var(--gray-300);
+}
+
+.navbar-progress-value {
+  font-weight: bold;
+  color: var(--primary-400);
+}
+
+/* User Info */
+.navbar-user-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.navbar-user-avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: linear-gradient(135deg, var(--primary-500), var(--purple-600));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-user-details {
+  text-align: left;
+}
+
+.navbar-user-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-200);
+}
+
+.navbar-user-email {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+}
+
+/* Logout Button */
+.navbar-logout-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--red-400);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.navbar-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* Mobile Menu Button */
+.navbar-mobile-btn {
+  display: block;
+  padding: var(--spacing-2);
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: var(--radius-lg);
+  color: var(--gray-100);
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-btn {
+    display: none;
+  }
+}
+
+.navbar-mobile-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu */
+.navbar-mobile-menu {
+  display: block;
+  padding-bottom: var(--spacing-4);
+  animation: slideIn 0.3s ease-out;
+}
+
+@media (min-width: 768px) {
+  .navbar-mobile-menu {
+    display: none;
+  }
+}
+
+.navbar-mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.navbar-mobile-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-mobile-label {
+  font-size: 0.875rem;
+  color: var(--gray-400);
+  margin-bottom: var(--spacing-1);
+}
+
+.navbar-mobile-value {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--primary-400);
+}
+
+.navbar-mobile-logout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--red-400);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
